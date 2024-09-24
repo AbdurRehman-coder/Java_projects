@@ -19,6 +19,10 @@ public class Human {
     boolean isMarried;
     static int population;
 
+    static void message(){
+        System.out.println("hello there..");
+        // this.name; // .this cannot be referenced from a static context
+    }
 
     public Human(String name, int age, int salary, boolean isMarried) {
         this.name = name;
@@ -26,6 +30,8 @@ public class Human {
         this.salary = salary;
         this.isMarried = isMarried;
         Human.population += 1;
+        this.message(); //it works but it show warning that make it like a class name
+        Human.message(); // that's fine now, b/c this reference to the current obj and static is obj independent
     }
 
 
