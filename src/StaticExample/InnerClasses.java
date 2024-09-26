@@ -12,8 +12,16 @@ public class InnerClasses {
     }
 
     public static void main(String[] args) {
-        Test a = new Test("Rehman");
+        InnerClasses inner = new InnerClasses();
+       Test a = new Test("Rehman");
         Test b = new Test("Ujala");
+        InnerClasses a1 = new InnerClasses();
+
+        /// We can also access like this, if inner class is not a static one
+//        InnerClasses inner = new InnerClasses();
+//        InnerClasses.Test a = new InnerClasses.Test("Rehman");
+//        InnerClasses.Test b = new InnerClasses.Test("Ujala");
+//        InnerClasses a1 = new InnerClasses();
 
         System.out.println(a.name + " " + b.name);
     }
