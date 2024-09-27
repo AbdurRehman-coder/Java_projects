@@ -20,13 +20,16 @@ public class Main {
 
 //       “its important to understand, that the type of the reference variable (left side)
 //       and not the type of the object (right side) that determines what members and properties can be accessed and what not.”
+        // mean reference variable type decide which properties to be accessed
 //        That’s why we cannot access child class properties with box1 in the above case.
-        Box box4 = new BoxWeight();
+        Box box4 = new BoxWeight(); // Here we can only access parent class properties
         System.out.println(box4.l); // fine
 //        System.out.println(box4.weight); // Error
 
-//        BoxWeight boxWeight3 = new Box();  // Show error on this
         // Because how its possible to create reference of variable of type child class and
         // create the object of parent class, then how we can initialize the variables of child class
+        // because here the object is created of parent class (Box()).
+//        BoxWeight boxWeight3 = new Box();  // Show error on this
+
     }
 }
