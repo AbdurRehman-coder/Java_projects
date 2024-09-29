@@ -1,4 +1,4 @@
-package inheritance;
+package OOPS.inheritance;
 // parent class
 public class Box {
     double l;
@@ -9,6 +9,8 @@ public class Box {
         this.l = -1;
         this.w = -1;
         this.h = -1;
+        System.out.println("This is BoxPrice (Neeka)");
+
     }
 
     // square box with same value
@@ -22,6 +24,12 @@ public class Box {
         this.l = l;
         this.h = h;
         this.w = w;
+      }
+      // passing the other object of its own type
+      Box(Box box){
+        this.l = box.l;
+        this.h = box.h;
+        this.w = box.w;
       }
 
     @Override
